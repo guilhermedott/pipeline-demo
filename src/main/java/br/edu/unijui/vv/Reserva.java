@@ -11,7 +11,7 @@ public final class Reserva {
     private Status status = Status.ATIVA;
 
     public Reserva(String sala, LocalDateTime inicio, int minutos) {
-        if (minutos < 30 || minutos > 120) {
+        if (minutos < 30 || minutos >= 120) {
             throw new IllegalArgumentException("Duracao fora dos limites");
         }
         this.sala = sala;
